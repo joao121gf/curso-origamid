@@ -11,9 +11,8 @@ li {
     display: flex;
     flex-wrap: wrap;
     background-color: bisque;
-    height: 100vh;
-    justify-content: right;
-    align-content: center;
+
+
 }
 
 
@@ -24,5 +23,7 @@ li{
     margin-right: 20px;
     color: wheat;
     font-size: 1.5em;
+
+    align-items: center;
     
 }
