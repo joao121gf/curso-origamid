@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+li {
+    list-style-type: none;
+}
+
+
+
+.filmes {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: bisque;
+    height: 100vh;
+    justify-content: right;
+    align-content: center;
+}
+
+
+li{
+    padding: 10px;
+    background-color: rgb(1, 5, 8);
+    display: flex;
+    margin-right: 20px;
+    color: wheat;
+    font-size: 1.5em;
+    
+}
