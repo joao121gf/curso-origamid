@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 65px;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.menu > p {
+    padding: 15px 30px;
+    background-color: white;
+    margin-right: 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.404);
+    transition: all 0.15s ease-in-out;
+}
+.menu > p:hover {
+    background-color: #e21;
+    color: white;
+    cursor: pointer;
+    -webkit-user-select: none;
+    transform: scale(1.1);
+}
+
+
+/* Ajustando os quadrados que contém as imagens do main */
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    
+}
+.quadrados {
+    height: 246px;
+    background-color: white;
+    text-align: right;
+    padding: 60px 40px;
+    font-size: 20px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #ee2211 ;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+/* Configurando imagem da bicicleta */
+
+img.img2 {
+    width: 100%;
+    height: auto;
+
+
+}
+
+
+/* Configurando detalhe vermelho entre os grids */
+.detalhe {
+    width: 60px;
+    height: 4px;
+    background: #e21;
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+/* Configurando texto de VANTAGENS BIKCRAFT   */
+.texto {
+    font-size: 64px;
+}
+
+.vantagens {
+    background-color: #f7f7f7;
+    height: 246px;
+    width: 430px;
+    text-align: right;
+    padding: 60px 40px;
+    color: #c6c6c6;
+    
+
+}
+
+/* Configurando as expecificações */
+#legenda > img {
+    height: 30px;
+    width: 30px;
+
+}
+
+
+#legenda {
+    height: 350px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    
+}
+
+#legenda > p,h3 {
+    text-align: initial;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 20px;
+}
+
+#legenda > p {
+    grid-column: 2;
+
+}
+
+/* Configurando o rodapé */
+footer > p {
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    background-color: white;
+    margin: 0px;
+    margin-top: 50px;
+}
+
+
+footer > p > a {
+    background-color: white;
+    color: #e21;
+    padding: 0px;
+    
+}
+
+footer > p > a:hover {
+    text-decoration: underline;
+}
