@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+
+a {
+    background-color: blueviolet;
+    padding: 10px 20px;
+    margin: 20px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+}
+
+
+/* a:hover {
+    background-color: black;
+    transition: .3s;
+} */
+
+/* Quando o usuario apertar tab */
+/* a:focus {
+    background-color: antiquewhite;
+    color: wheat;
+} */
+
+/* Quando o usuario clicar */
+a:active{
+    background-color: firebrick;
+    color: aquamarine;
+}
+
+
+
+/* Clicou no link ou nao ( nao e muito recomendavel usar */
+a:visited {
+    background-color: #fda;
+    color: #731;
+}
