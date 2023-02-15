@@ -77,6 +77,19 @@ img.img2 {
 }
 
 
+#testando::before{
+    content: "";
+    width: 63px;
+    background-color: red;
+    height: 4px;
+    display: block;
+    position: absolute;
+    top: 21px;
+    left: 479px;
+    z-index: 1;
+}
+
+
 /* Configurando detalhe vermelho entre os grids */
 .detalhe {
     width: 60px;
@@ -90,6 +103,7 @@ img.img2 {
 /* Configurando texto de VANTAGENS BIKCRAFT   */
 .texto {
     font-size: 64px;
+    background-image: url(img/onda.svg);
 }
 
 .vantagens {
@@ -112,9 +126,9 @@ img.img2 {
 
 
 #legenda {
-    height: 350px;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    height: 408px;
+    /* display: grid; */
+    /* grid-template-columns: auto 1fr; */
     
 }
 
@@ -122,13 +136,38 @@ img.img2 {
     text-align: initial;
     margin: 0px;
     padding: 0px;
-    padding-left: 20px;
+    text-align: left;
 }
 
 #legenda > p {
     grid-column: 2;
 
 }
+
+
+.bio:not(#branco){
+    background-color: #F7F7F7;
+}
+
+.bio {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0px 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+    min-width: 354px;
+}
+
+.bio:hover{
+    border-left: 3px solid #e21;
+}
+
+div > .bio > p {
+    grid-column: 2;
+}
+
+
+
 
 /* Configurando o rodapé */
 footer > p {
