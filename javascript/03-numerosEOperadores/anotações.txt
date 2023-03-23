@@ -1,0 +1,20 @@
+se voce decalra uma variavel string sendo um numero:
+exemplo: var idade = '28';
+
+
+e dpeois tenta somar com outro numero:
+
+idade + somaidade
+
+o resultado sera que o js vai concatetar vai ficar 2839 por exemplo
+
+
+
+MAS SE VOCE USAR O SINAL DE + ANTES DA SUA STRING NUMERICA O JS VAI TRANSFORMAR ISSO EM numero
+
++idade + somaidade = 45
+
+
+pode colocar numero negativo
+
+-idade + -somaidade
