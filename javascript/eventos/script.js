@@ -31,3 +31,28 @@ function handleLinkExerno(evento){
 }
 
 linkExterno.addEventListener('click', handleLinkExerno);
+
+
+
+const h1 = document.querySelector('h1');
+
+
+function handleEvent(event){
+    console.log(event.type, event)
+}
+
+
+// h1.addEventListener('click',  handleEvent)
+// h1.addEventListener('mousemove', handleEvent)
+
+
+// window.addEventListener('scroll', handleEvent)
+
+// window.addEventListener('keydown', handleEvent)
+
+
+function handleKeyboard(event){
+    console.log(event.key)
+}
+
+window.addEventListener('keydown',handleKeyboard)
