@@ -3,6 +3,14 @@ body, h1, h2, ul, li, p, dd, dt, dl {
   padding: 0px;
 }
 
+
+.texto-maior{
+  font-size: 20px;
+}
+.ativo{
+  background-color: #E54;
+}
+
 img {
   display: block;
   max-width: 100%;

@@ -1,51 +1,58 @@
-// Verifique a distância da primeira imagem
-// em relação ao topo da página
-const primeiraImg = document.querySelector('img');
-console.log(`A distância da primeira imagem em relação ao topo da página são ${primeiraImg.offsetTop} px`)
+// Quando o usuário clicar nos links internos do site,
+// adicione a classe ativo ao item clicado e remova dos
+// demais itens caso eles possuam a mesma. Previna
+// o comportamento padrão desses links
+const linksInternos = document.querySelectorAll('a[href^="#"]')
 
 
 
-// Retorne a soma da largura de todas as imagens
-function somaImagens (){
-  const todasImagens = document.querySelectorAll('img');
-  let larguraTodasImagens = 0
-  todasImagens.forEach((itens) => {
-    
-    larguraTodasImagens += itens.offsetWidth
+function clickLinks(event){
+  event.preventDefault();
+  linksInternos.forEach((link) => {
+    link.classList.remove('ativo');
   })
-  console.log(larguraTodasImagens)
+  event.currentTarget.classList.add('ativo')
+  this.getAttribute('src')
+  
+  
 }
-
-window.onload = function(){
-  somaImagens();
-}
-
-
-
-// Verifique se os links da página possuem
-// o mínimo recomendado para telas utilizadas
-// com o dedo. (48px/48px de acordo com o google)
-const linksPagina = document.querySelectorAll('a');
-const pxRecomendado = 48
-linksPagina.forEach((itens) =>{
-  if (itens.offsetHeight && itens.offsetWidth < pxRecomendado){
-    console.log(`Não tem o tamanho recomendado, necessário 48px/48px. o container tem ${itens.offsetHeight}px / ${itens.offsetWidth}px`)
-  } else{
-    console.log(`tem o tamanho recomendado, necessário 48px/40px. o container tem ${itens.offsetHeight}px / ${itens.offsetWidth}px`)
-  }
-
+linksInternos.forEach((link) =>{
+  link.addEventListener('click', clickLinks)
 })
 
 
 
-// Se o browser for menor que 720px,
-// adicione a classe menu-mobile ao menu
-const menu = document.querySelector('.menu');
-console.log(menu)
-const smallWindow = window.matchMedia('(max-width: 600px)').matches
 
-if (smallWindow === true){
-  console.log('oi')
-  menu.classList.add('menu-mobile')
+
+
+// Selecione todos os elementos do site começando a partir do body,
+// ao clique mostre exatamente quais elementos estão sendo clicados
+
+
+
+// Utilizando o código anterior, ao invés de mostrar no console,
+// remova o elemento que está sendo clicado, o método remove() remove um elemento
+
+const todosElementos = document.querySelectorAll('*')
+
+
+
+function elementoSelecionado(event){
+  event.target.remove()
+
+} 
+
+todosElementos.forEach((item) => {
+  item.addEventListener('click', elementoSelecionado)
+})
+
+
+function tamanhoTexto(event){
+  if(event.key === 't'){
+    document.documentElement.classList.toggle('texto-maior')
+  }
 }
 
+window.addEventListener('keydown', tamanhoTexto)
+
+// Se o usuário clicar na tecla (t), aumente todo o texto do site. 

@@ -1,58 +1,44 @@
-const img = document.querySelector('img');
+// const img = document.querySelector('img');
 
-function callback(){
-    console.log('Clicou')
+// function callback(event){
+//     // console.log(event)
+//     const currentTarget = event.currentTarget;
+//     const target = event.target;
+//     const path = event.path
+//     console.log(path)
+//     console.log(target)
+//     console.log(currentTarget)
+//     console.log(this)
+// }
+
+// img.addEventListener('click', callback)
+
+
+// function mudaCor(event){
+//     if (event.key === 'c'){
+//         document.body.classList.toggle('azul')
+//     }
+// }
+
+// window.addEventListener('keydown', mudaCor)
+
+
+const img = document.querySelectorAll('img');
+
+function handleImg(event){
+    console.log(event.target.getAttribute('src'))
 }
 
-
-img.addEventListener('click', callback)
-
-const animaisLista = document.querySelector('.animais-lista');
-console.log(animaisLista)
-
-function callbackLista(event){
-    console.log(event.currentTarget)
-    console.log(event.target)
-
-}
-
-animaisLista.addEventListener('click', callbackLista);
-
-
-const linkExterno = document.querySelector('a[href^="http"]')
-
-
-function handleLinkExerno(evento){
-    // Previne o padrao
-    evento.preventDefault();
-
-    console.log('Clicou')
-
-}
-
-linkExterno.addEventListener('click', handleLinkExerno);
+img.forEach((img) => {
+    img.addEventListener('click', handleImg)
+})
 
 
 
-const h1 = document.querySelector('h1');
 
 
-function handleEvent(event){
-    console.log(event.type, event)
-}
-
-
-// h1.addEventListener('click',  handleEvent)
-// h1.addEventListener('mousemove', handleEvent)
-
-
-// window.addEventListener('scroll', handleEvent)
-
-// window.addEventListener('keydown', handleEvent)
-
-
-function handleKeyboard(event){
-    console.log(event.key)
-}
-
-window.addEventListener('keydown',handleKeyboard)
+// function bemVindo (event){
+//     console.log('oiu')
+//     console.log(event)
+// }
+// img.addEventListener('click', bemVindo)
