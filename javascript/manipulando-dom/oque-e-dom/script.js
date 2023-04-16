@@ -9,3 +9,5 @@ function clicouH1() {
 }
 
 h1Selecionado.addEventListener('click', clicouH1);
+
+
