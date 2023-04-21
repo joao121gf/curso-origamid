@@ -1,55 +1,46 @@
-// Transforme o objeto abaixo em uma Constructor Function
-const pessoa = {
-    nome: 'Nome pessoa',
-    idade: 0,
-    andar() {
-      console.log(this.nome + ' andou');
-    }
-  }
+// Crie uma função construtora de Pessoas
+// Deve conter nome, sobrenome e idade
+// Crie um método no protótipo que retorne
+// o nome completo da pessoa
 
-
-function Pessoa(nomePessoa, idadePessoa){
-    this.nome = nomePessoa;
-    this.idade = idadePessoa;
-    this.andar = function(){
-        console.log(this.nome + 'andou')
-    }
+function Pessoas(nome, sobrenome, idade){
+  this.nome = nome
+  this.sobrenome = sobrenome
+  this.idade = idade
 }
 
+// Pessoas.prototype.nomeCompleto = function(){
+//   Pessoas.
+// }
 
-  
-  // Crie 3 pessoas, João - 20 anos,
-  // Maria - 25 anos, Bruno - 15 anos
-const joao = new Pessoa('joao', 20)
-const maria = new Pessoa('maria', 25)
-const bruno = new Pessoa('bruno', 15)
+Pessoas.prototype.nomeCompleto = function(){
+  return `${this.nome} ${this.sobrenome}`
+}
+
+const pessoa1 = new Pessoas('Joao', 'Giovani', 22)
 
 
-  
-  // Crie uma Constructor Function (Dom) para manipulação
-  // de listas de elementos do dom. Deve conter as seguintes
-  // propriedades e métodos:
-  //
-  // elements, retorna NodeList com os elementos selecionados
-  // addClass(classe), adiciona a classe a todos os elementos
-  // removeClass(classe), remove a classe a todos os elementos
-  
-  function ElementosDom(seletor){
-    this.element = function(){
-        return document.querySelectorAll(seletor)
-    }
-    this.ativar = function(){
-        const elementos = this.element()
-        elementos.forEach((itens) =>{
-            itens.classList.add('classe')
-        })
-    }
-    this.remove = function(){
-        const elementos = this.element();
-        elementos.forEach((itens) =>{
-            itens.classList.remove('classe')
-        })
-    }
-  }
 
-const li = new ElementosDom('li')
+
+
+// Liste os métodos acessados por 
+// dados criados com NodeList,
+// HTMLCollection, Document
+console.log(NodeList.prototype)
+console.log(HTMLAllCollection.prototype)
+console.log(Document.prototype)
+
+// Liste os construtores dos dados abaixo
+const li = document.querySelector('li');
+
+li.constructor.name // li;
+li.click.constructor.name // li.click;
+li.innerText.constructor.name // li.innerText;
+li.value.constructor.name // li.value;
+li.hidden.constructor.name// li.hidden;
+li.offsetLeft.constructor.name// li.offsetLeft;
+li.click.constructor.name// li.click();
+
+// // Qual o construtor do dado abaixo:
+// li.hidden.constructor.name;
+console.log(li.hidden.constructor.name)
