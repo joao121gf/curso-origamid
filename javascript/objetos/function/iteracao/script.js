@@ -1,0 +1,1 @@
+// Crie um array de números e use o método map para criar um novo array com o dobro de cada número.
