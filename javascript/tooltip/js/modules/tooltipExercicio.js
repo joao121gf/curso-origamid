@@ -4,8 +4,12 @@ export default function initTolltipExercicio() {}
 
 window.addEventListener("load", () => {
   const raposa = document.querySelector('[data-animais="raposa"]');
-  
+  const esquilo = document.querySelector('[data-animais="esquilo"]');
+
+
   raposa.addEventListener('mouseover', mouseOnAnimais)
+  esquilo.addEventListener('mouseover', mouseOnAnimais)
+
 
   function mouseOnAnimais(event){
     const divAnimais = criaAnimaisDiv(this)
