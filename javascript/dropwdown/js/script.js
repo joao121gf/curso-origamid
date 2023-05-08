@@ -5,6 +5,7 @@ import initTabNav from "./modules/tabnav.js";
 import initModal from "./modules/modal.js";
 import initTolltip from "./modules/tooltip.js";
 import dropdownMenu from "./modules/dropdown.js";
+import dropdownMenuEx from "./modules/dropdownEx.js";
 // import initTolltipExercicio from "./modules/tooltipExercicio.js";
 
 
@@ -15,5 +16,7 @@ initTabNav();
 initModal();
 initTolltip();
 dropdownMenu();
+dropdownMenuEx();
+
 
 // initTolltipExercicio();

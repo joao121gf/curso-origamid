@@ -1,0 +1,43 @@
+.contact-data{
+  position: absolute;
+  font-weight: bold;
+  background-color: #e54;
+  border: 2px solid #333;
+  z-index: 20;
+  cursor: pointer;
+}
+
+[data-contact]:hover .contact-data{
+  display: block !important;
+
+}
+
+[data-contact] .contact-data{
+  display: none;
+}
+
+
+
+.contact-data li{
+  padding: 10px;
+}
+
+.contact-data li:hover{
+  color: white;
+}
+
+
+[data-content]{
+  display: block;
+  position: relative;
+
+}
+
+[data-content] .contact-ativa{
+  display: block;
+}
+
+
+
+
+
