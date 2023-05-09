@@ -9,14 +9,25 @@
 
 [data-contact]:hover .contact-data{
   display: block !important;
+  animation: downAni .5s forwards;
 
 }
 
 [data-contact] .contact-data{
   display: none;
+
 }
 
-
+@keyframes downAni{
+  from{
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 .contact-data li{
   padding: 10px;
@@ -27,17 +38,18 @@
 }
 
 
+
 [data-content]{
   display: block;
   position: relative;
 
 }
 
-[data-content] .contact-ativa{
+
+
+
+[data-content] .contact-ativa,
+[data-contact].desceTab .contact-data{
   display: block;
 }
-
-
-
-
-
+ 
