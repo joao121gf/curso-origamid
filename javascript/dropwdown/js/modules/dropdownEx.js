@@ -4,11 +4,15 @@ export default function dropdownMenuEx(element, event, callback) {
     const contato = document.querySelectorAll('[data-contact]');
 
 
-    function outClick(callback){
+    function outClick(element, callback){
       const html = document.documentElement;
       html.addEventListener('click', handleOut);
       function handleOut(event){
-        callback();
+        if (!element.contains(event.target)){
+          html.removeEventListener('click', handleOut);
+          callback();
+          
+        }
       }
     }
   
@@ -17,12 +21,12 @@ export default function dropdownMenuEx(element, event, callback) {
     contato.forEach((items) =>{
       items.addEventListener('click', mostraTab);
     })
+
     function mostraTab(event, target){
       event.preventDefault();
       this.classList.add('desceTab')
-      // console.log(event.target)
-      outClick(()=> {
-        console.log(element)
+      outClick(this, ()=> {
+        this.classList.remove('desceTab')
       })
 
       // se eu clicar fora remove o desce tab
