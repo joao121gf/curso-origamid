@@ -1,25 +1,22 @@
-import initScrollSuave from "./modules/scroll-suave.js";
-import initAnimacaoScroll from "./modules/scroll-animacao.js";
-import initAccordion from "./modules/accordion.js";
-import initTabNav from "./modules/tabnav.js";
-import initModal from "./modules/modal.js";
-import initTolltip from "./modules/tooltip.js";
-import dropdownMenu from "./modules/dropdown.js";
-import dropdownMenuEx from "./modules/dropdownEx.js";
-import setTimeoutEx from "./modules/setTimeout.js";
+function chama(texto) {
+  console.log(texto);
+}
+setTimeout(chama, 2000, "Exercendo a função");
 
-// import initTolltipExercicio from "./modules/tooltipExercicio.js";
+setTimeout(() => {
+  console.log("Testando");
+}, 1000);
 
+// for (let n = 0; n < 20; n++){
+//   setTimeout(() => {
+//     console.log(n)
+//   }, 1000 * n)
+// }
 
-initScrollSuave();
-initAnimacaoScroll();
-initAccordion();
-initTabNav();
-initModal();
-initTolltip();
-dropdownMenu();
-dropdownMenuEx();
-setTimeoutEx();
-
-
-// initTolltipExercicio();
+let i = 0;
+const contarAte10 = setInterval(() => {
+  console.log(i++);
+  if (i > 10) {
+    clearInterval(contarAte10);
+  }
+}, 100);
