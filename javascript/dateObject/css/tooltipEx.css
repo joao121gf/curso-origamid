@@ -1,0 +1,31 @@
+.caixaRaposa{
+  position: absolute;
+  z-index: 2000;
+  padding: 10px 20px;
+  background-color: #ffbb558e;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+  animation: blink 1s linear infinite;
+}
+
+
+
+
+@keyframes blink {
+  0% {
+    background: linear-gradient(to right, red, orange);
+  }
+  25% {
+    background: linear-gradient(to right, orange, yellow);
+  }
+  50% {
+    background: linear-gradient(to right, yellow, green);
+  }
+  75% {
+    background: linear-gradient(to right, green, blue);
+  }
+  100% {
+    background: linear-gradient(to right, blue, violet);
+  }
+}
